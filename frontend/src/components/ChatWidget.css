@@ -1,6 +1,5 @@
 /* ==== PAGE CONTAINER ==== */
 
-/* Full-page background */
 .chat-page {
   min-height: 100vh;
   width: 100%;
@@ -15,7 +14,7 @@
 .chat-widget {
   max-width: 900px;
   width: 100%;
-  height: 80vh;              /* desktop: 80% viewport height */
+  height: 80vh;
   display: flex;
   flex-direction: column;
   border-radius: 16px;
@@ -68,8 +67,8 @@
 /* ==== MESSAGES AREA ==== */
 
 .chat-messages {
-  flex: 1;                     /* takes all remaining height */
-  overflow-y: auto;            /* only this area scrolls */
+  flex: 1;                  /* takes all remaining height */
+  overflow-y: auto;         /* only this scrolls */
   padding: 24px;
   background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
 }
@@ -88,7 +87,8 @@
   background: #a1a1a1;
 }
 
-/* Welcome section (when there are no messages) */
+/* Welcome section */
+
 .welcome-message {
   text-align: center;
   padding: 32px 16px;
@@ -138,7 +138,7 @@
   box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
 }
 
-/* ==== INDIVIDUAL MESSAGES ==== */
+/* ==== MESSAGES ==== */
 
 .message {
   display: flex;
@@ -252,7 +252,7 @@
 /* ==== INPUT FOOTER (ALWAYS VISIBLE) ==== */
 
 .chat-input {
-  flex-shrink: 0;               /* never shrinks */
+  flex-shrink: 0;
   display: flex;
   gap: 10px;
   padding: 14px 16px;
@@ -328,7 +328,7 @@
   }
 }
 
-/* ==== MOBILE: ensure input is visible without scroll ==== */
+/* ==== MOBILE: pull everything up so footer fits ==== */
 
 @media (max-width: 768px) {
   .chat-page {
@@ -337,57 +337,60 @@
 
   .chat-widget {
     border-radius: 0;
-    height: 100vh;          /* exactly viewport height */
+    height: 100vh;            /* exactly viewport height */
     max-width: 100%;
   }
 
+  /* shrink header */
   .chat-header {
-    padding: 10px 12px;
+    padding: 8px 10px;
   }
 
   .chat-header-left h2 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 
   .new-chat-btn {
-    padding: 6px 12px;
-    font-size: 0.8rem;
+    padding: 4px 10px;
+    font-size: 0.75rem;
   }
 
+  /* shrink welcome content a lot so it doesn't push footer down */
   .welcome-message {
-    padding: 16px 12px;     /* reduce vertical space */
+    padding: 12px 10px;
   }
 
   .welcome-message h3 {
-    font-size: 1.3rem;
-    margin-bottom: 6px;
+    font-size: 1.2rem;
+    margin-bottom: 4px;
   }
 
   .welcome-message p {
-    font-size: 0.95rem;
-    margin-bottom: 10px;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
   }
 
   .suggested-questions {
-    margin-top: 6px;
+    margin-top: 4px;
   }
 
   .suggested-questions button {
-    padding: 6px 10px;
-    font-size: 0.8rem;
+    padding: 4px 8px;
+    font-size: 0.75rem;
     margin: 3px;
   }
 
   .chat-messages {
-    padding: 8px 10px;
+    padding: 6px 8px;
   }
 
   .message-content {
     max-width: 85%;
   }
 
+  /* compact footer, but always visible */
   .chat-input {
-    padding: 8px 10px;      /* compact footer */
+    padding: 8px 10px;
   }
 
   .chat-input textarea {
@@ -398,6 +401,6 @@
 
   .send-btn {
     padding: 0 14px;
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 }
