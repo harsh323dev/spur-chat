@@ -331,23 +331,72 @@
 
   .chat-widget {
     border-radius: 0;
-    height: 100vh;      /* full viewport height */
+    height: 100vh;
     max-width: 100%;
   }
 
+  /* shrink header height on mobile */
   .chat-header {
-    padding: 12px 14px;
+    padding: 8px 12px;
   }
 
+  .chat-header-left h2 {
+    font-size: 1.2rem;
+  }
+
+  .new-chat-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  /* shrink welcome section so it doesn't push input down */
+  .welcome-message {
+    padding: 16px 12px;
+  }
+
+  .welcome-message h3 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 1.3rem;
+  }
+
+  .welcome-message p {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+  }
+
+  .suggested-questions {
+    margin-top: 8px;
+  }
+
+  .suggested-questions button {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+    margin: 4px;
+  }
+
+  /* tighten messages area padding */
   .chat-messages {
-    padding: 12px;
+    padding: 8px 10px;
   }
 
   .message-content {
     max-width: 85%;
   }
 
+  /* keep input compact and always visible */
   .chat-input {
-    padding: 10px 12px;
+    padding: 8px 10px;
+  }
+
+  .chat-input textarea {
+    max-height: 72px;
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+
+  .send-btn {
+    padding: 0 14px;
+    font-size: 1rem;
   }
 }
