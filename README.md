@@ -12,7 +12,7 @@
 [![Render](https://img.shields.io/badge/Backend-Render-0466C8?style=for-the-badge&logo=render&logoColor=white)](https://render.com/) 
 [![Vercel](https://img.shields.io/badge/Frontend-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/) 
 
-**🚀 Live Demo (Frontend):** https://spurchat-harsh.vercel.com/ 
+**🚀 Live Demo (Frontend):** https://spurchat-harsh.vercel.app/  
 **🧠 Backend API:** https://spurchat-harsh.onrender.com/  
 **📊 Health:** https://spurchat-harsh.onrender.com/health 
 
